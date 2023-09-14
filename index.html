@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="cv-form-div">
+        <form id="cvForm" name="cvForm" onsubmit="formSubmitHandler()">
+          <div class="personalInformationSection">
+            <h2>Personal Information</h2>
+            <div class="form-controls">
+              <div class="form-control">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4"required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div id="educationSection">
+            <h2>Education</h2>
+            <input type="button" onclick="addEducationInput()" value="+"required/>
+            <div class="form-controls">
+              <div class="form-control">
+                <label for="university">University:</label>
+                <input type="text" id="university" name="university" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="gradYear">Graduation Year:</label>
+                <input type="text" id="gradYear" name="gradYear" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="cgpa">Percentage/C.G.P.A:</label>
+                <input type="text" id="cgpa" name="cgpa" required/>
+              </div>
+            </div>
+          </div>
+
+          <div id="experienceSection">
+            <h2>Experience</h2>
+            <button onclick="addExperienceInput()">+</button>
+            <div class="form-controls">
+              <div class="form-control">
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration" required/>
+              </div>
+            </div>
+          </div>
+
+          <div id="projectSection">
+            <h2>Projects</h2>
+            <button onclick="addProjectInput()">+</button>
+            <div class="form-controls">
+              <div class="form-control">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="projectLink">Link:</label>
+                <input type="text" id="projectLink" name="projectLink" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="projectDescription">Description:</label>
+                <input
+                  type="text"
+                  id="projectDescription"
+                  name="projectDescription"
+                required/>
+              </div>
+            </div>
+          </div>
+
+          <div id="skillSection">
+            <h2>Skills</h2>
+            <button onclick="addSkillInput()">+</button>
+            <div class="form-controls">
+              <div class="form-control">
+                <label for="languages">Programmming Language:</label>
+                <input type="text" id="languages" name="languages" required/>
+              </div>
+
+              <div class="form-control">
+                <label for="tools">Tool:</label>
+                <input type="text" id="tools" name="tools" required/>
+              </div>
+            </div>
+          </div>
+
+          <div class="submit-btn" onmouseover="checkButton()">
+            <button id="generateButton" type="submit" >Generate CV</button>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
