@@ -327,7 +327,7 @@ const formSubmitHandler = () => {
   userArray.push(finalObj);
   setLocalArray(userArray);
 
-  window.location.href = '/resume.html?id='+id;
+  window.location.href = '/resume_builder_public/resume.html?id='+id;
 };
 
 const removeFieldHandler = (fieldId) => {
